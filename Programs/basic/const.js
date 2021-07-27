@@ -1,18 +1,15 @@
 //A program to implement constructor without classes
 
 //Constructor function
-class Circle 
+function Circle(radius) 
 {
-    constructor(radius) 
+    this.radius = radius;
+    this.draw = function ()
     {
-        this.radius = radius;
-        this.draw = function () 
-        {
-            const pi=3.14;
-            let area = (pi * (radius * radius));
-            console.log("The area of the circle is: " + area);
-        };
-    }
+        const pi=3.14;
+        let area = (pi * (radius * radius));
+        console.log("The area of the circle is: " + area);
+    };
 }
 
 //In JavaScript, a function is an object
