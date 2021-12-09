@@ -1,0 +1,141 @@
+/*Program to style the website*/
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    font-family: 'Baloo Bhai 2', cursive;
+    background: url("../WebBG.jpeg");
+    min-height: 100vh;
+    background-size: 100vw 105vh;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.left
+{
+    position: absolute;
+    left: 35px;
+    top: 20px;
+    display: inline-block;
+    border: 2px;
+}
+
+.left div
+{
+    line-height: 20px;
+    font-size: 25px;
+    color: rgb(206, 152, 37);
+    text-align: center;
+}
+
+.left img
+{
+    width:65px;
+    height:55px;
+    filter: invert(100%);
+}
+
+.mid
+{
+    display: block;
+    width:45%;
+    margin: 20px auto;
+    border: 2px;
+}
+
+.right
+{
+    position: absolute;
+    right: 32px;
+    top: 20px;
+    display: inline-block;
+    border: 2px;
+}
+
+.navbar
+{
+    display: inline-block;
+}
+
+.navbar li
+{
+    display: inline-block;
+    font-size: 25px;
+}
+
+.navbar li a
+{
+    color: white;
+    text-decoration: none;
+    padding: 34px 23px;
+}
+
+.navbar li a:hover
+{
+    text-decoration: underline;
+    color: grey;
+}
+
+.navbar li a.active
+{
+    color: aquamarine;
+}
+
+.btn
+{
+    font-family: 'Baloo Bhai 2', cursive;
+    margin: 0px 9px;
+    color: white;
+    background-color: black;
+    padding: 5px 15px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn:hover
+{
+    background-color: grey;
+}
+
+.container
+{
+    border: 2px;
+    margin: 100px 35px;
+    padding: 25px;
+    width: 30%;
+    border-radius: 2px;
+}
+
+.formGroup input
+{
+    text-align: center;
+    font-family: 'Baloo Bhai 2', cursive;
+    display: block;
+    width: 300px;
+    padding: 3px;
+    border: 2px solid black;
+    margin: 7px auto;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+.container h1
+{
+    text-align: center;
+}
+
+.container button
+{
+    display: block;
+    width: 82%;
+    margin: auto;
+}
