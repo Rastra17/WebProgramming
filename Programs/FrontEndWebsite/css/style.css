@@ -11,7 +11,7 @@
 body
 {
     font-family: 'Baloo Bhai 2', cursive;
-    background: url("../WebBG.jpeg");
+    background: url("../WebBG.png");
     min-height: 100vh;
     background-size: 100vw 105vh;
     background-repeat: no-repeat;
@@ -31,15 +31,18 @@ body
 {
     line-height: 20px;
     font-size: 25px;
-    color: rgb(206, 152, 37);
+    color: rgb(255, 255, 255);
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .left img
 {
-    width:65px;
-    height:55px;
+    width:85px;
+    height:75px;
     filter: invert(100%);
+    padding-left:40px;
 }
 
 .mid
@@ -85,7 +88,7 @@ body
 
 .navbar li a.active
 {
-    color: aquamarine;
+    color: rgb(210, 255, 127);
 }
 
 .btn
