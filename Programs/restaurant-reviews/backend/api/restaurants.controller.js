@@ -53,6 +53,7 @@ export default class RestaurantsController
                 res.status(404).json({error: "Not found"});
                 return
             }
+            res.json(restaurant);
         }
         catch(e)
         {
