@@ -17,7 +17,7 @@ export default class RestaurantsDAO
         }
         catch(e)
         {
-            console.error("Unable to establish a collection handle in restaurantsDAO: ${e}");
+            console.error(`Unable to establish a collection handle in restaurantsDAO: ${e}`);
         }
     }
 
@@ -55,7 +55,7 @@ export default class RestaurantsDAO
         }
         catch(e)
         {
-            console.error("Unable to find command, ${e}");
+            console.error(`Unable to find command, ${e}`);
             return {restaurantsList:[], totalNumRestaurants:0};
         }
 
@@ -70,7 +70,7 @@ export default class RestaurantsDAO
         }
         catch(e)
         {
-            console.error("Unable to convert cursor to array or problem counting documents, ${e}");
+            console.error(`Unable to convert cursor to array or problem counting documents, ${e}`);
 
             return {restaurantsList:[], totalNumRestaurants:0};
         }
@@ -129,7 +129,7 @@ export default class RestaurantsDAO
         }
         catch(e)
         {
-            console.error("Something went wrong in getRestaurantByID: ${e}");
+            console.error(`Something went wrong in getRestaurantByID: ${e}`);
             throw e;
         }
     }
@@ -144,7 +144,7 @@ export default class RestaurantsDAO
         }
         catch(e)
         {
-            console.error("Unable to get cuisines, ${e}");
+            console.error(`Unable to get cuisines, ${e}`);
             return cuisines;
         }
     }

@@ -21,7 +21,7 @@ export default class RestaurantsController
             filters.name=req.query.name;
         }
 
-        const {restaurantsList, totalNumRestaurants}=await RestaurantsDAO.GetRestaurants
+        const {restaurantsList, totalNumRestaurants}=await RestaurantsDAO.getRestaurants
         (
             {
                 filters,
@@ -56,7 +56,7 @@ export default class RestaurantsController
         }
         catch(e)
         {
-            console.log("api, ${e}");
+            console.log(`api, ${e}`);
             res.status(500).json({error: e});
         }
     }
@@ -70,7 +70,7 @@ export default class RestaurantsController
         }
         catch(e)
         {
-            console.log("api, ${e}");
+            console.log(`api, ${e}`);
             res.status(500).json({error: e});
         }
     }

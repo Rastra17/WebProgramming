@@ -28,7 +28,7 @@ MongoClient.connect
         await RestaurantsDAO.injectDB(client);
         app.listen(port, ()=>
         {
-            console.log("Listening on port ${port}");
+            console.log(`Listening on port ${port}`);
         });
     }
 );

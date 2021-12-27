@@ -18,7 +18,7 @@ export default class ReviewsDAO
         }
         catch(e)
         {
-            console.error("Unable to esablish collection handles in userDAO: ${e}");
+            console.error(`Unable to esablish collection handles in userDAO: ${e}`);
         }
     }
 
@@ -38,7 +38,7 @@ export default class ReviewsDAO
         }
         catch(e)
         {
-            console.error("Unable to post review: ${e}");
+            console.error(`Unable to post review: ${e}`);
             return {error:e};
         }
     }
@@ -56,7 +56,7 @@ export default class ReviewsDAO
         }
         catch(e)
         {
-            console.error("Unable to update review: ${e}");
+            console.error(`Unable to update review: ${e}`);
             return {error:e};
         }
     }
@@ -76,7 +76,7 @@ export default class ReviewsDAO
         }
         catch(e)
         {
-            console.error("Unable to delete review: ${e}");
+            console.error(`Unable to delete review: ${e}`);
             return {error:e};
         }
     }
