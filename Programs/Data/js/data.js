@@ -1856,6 +1856,7 @@ function dt_display(index)
     return searchItem
 }
 
+//For dropdown menu
 //let temp=document.getElementById("options")
 
 // temp.addEventListener
@@ -1876,6 +1877,7 @@ function dt_display(index)
 //   }
 // )
 
+//For textbox with Submit button function
 function mainDisplay()
 {
     var val = document.getElementById("textbox").value;
