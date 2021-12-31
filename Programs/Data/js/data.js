@@ -1867,6 +1867,27 @@ function del()
     $("#Vdata tbody tr").remove()
 }
 
+function arraySearch(funcInput, val)
+{
+    for(let i=0;i<=1825;i++)
+        {
+            if(funcInput(i)===val)
+            {
+                let template=
+                            `
+                                <tr>
+                                    <td>${sc_display(i)}</td>
+                                    <td>${st_display(i)}</td>
+                                    <td>${cn_display(i)}</td>
+                                    <td>${dt_display(i)}</td>
+                                </tr>
+                            `
+
+                table.innerHTML+=template
+            }
+        }
+}
+
 //For dropdown menu
 
 //SkyCondition dropdown
@@ -1887,46 +1908,14 @@ skcon.addEventListener
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(sc_display(i)==="clear")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(sc_display, "clear")
         }
 
         else if(value==="cloudy")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(sc_display(i)==="cloudy")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(sc_display, "cloudy")
         }
 
     }
@@ -1955,184 +1944,56 @@ surpe.addEventListener
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(st_display(i)==="vegetation")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(st_display, "vegetation")
         }
 
         else if(value==="ocean or lake")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(st_display(i)==="ocean or lake")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(st_display, "ocean or lake")
         }
 
         else if(value==="smoke")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(st_display(i)==="smoke")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(st_display, "smoke")
         }
 
         else if(value==="clouds")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(st_display(i)==="clouds")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(st_display, "clouds")
         }
 
         else if(value==="mixed")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(st_display(i)==="mixed")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(st_display, "mixed")
         }
 
         else if(value==="barren")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(st_display(i)==="barren")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(st_display, "barren")
         }
 
         else if(value==="snow ice")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(st_display(i)==="snow ice")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(st_display, "snow ice")
         }
 
         else if(value==="skyBRDF")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(st_display(i)==="skyBRDF")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(st_display, "skyBRDF")
         }
 
         else
@@ -2166,368 +2027,112 @@ camgn.addEventListener
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(cn_display(i)==="TARFOX")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(cn_display, "TARFOX")
         }
 
         else if(value==="Skukuza2005")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(cn_display(i)==="Skukuza2005")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(cn_display, "Skukuza2005")
         }
 
         else if(value==="SCAR-A")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(cn_display(i)==="SCAR-A")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(cn_display, "SCAR-A")
         }
 
         else if(value==="Kuwait")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(cn_display(i)==="Kuwait")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(cn_display, "Kuwait")
         }
 
         else if(value==="FireAce")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(cn_display(i)==="FireAce")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(cn_display, "FireAce")
         }
 
         else if(value==="SCARB")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(cn_display(i)==="SCARB")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(cn_display, "SCARB")
         }
 
         else if(value==="DiscoverAQ")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(cn_display(i)==="DiscoverAQ")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(cn_display, "DiscoverAQ")
         }
 
         else if(value==="ARCTAS")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(cn_display(i)==="ARCTAS")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(cn_display, "ARCTAS")
         }
 
         else if(value==="LEADEX")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(cn_display(i)==="LEADEX")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(cn_display, "LEADEX")
         }
 
         else if(value==="CLAMS")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(cn_display(i)==="CLAMS")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(cn_display, "CLAMS")
         }
 
         else if(value==="ARMCAS")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(cn_display(i)==="ARMCAS")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(cn_display, "ARMCAS")
         }
 
         else if(value==="SAFARI2000")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(cn_display(i)==="SAFARI2000")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(cn_display, "SAFARI2000")
         }
 
         else if(value==="INTEX-B")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(cn_display(i)==="INTEX-B")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(cn_display, "INTEX-B")
         }
 
         else if(value==="CLASIC")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(cn_display(i)==="CLASIC")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(cn_display, "CLASIC")
         }
 
         else if(value==="Eco3D")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(cn_display(i)==="Eco3D")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(cn_display, "Eco3D")
         }
 
         else if(value==="SnowEx")
         {
             del()
 
-            for(let i=0;i<=1825;i++)
-            {
-                if(cn_display(i)==="SnowEx")
-                {
-                    let template=
-                                `
-                                    <tr>
-                                        <td>${sc_display(i)}</td>
-                                        <td>${st_display(i)}</td>
-                                        <td>${cn_display(i)}</td>
-                                        <td>${dt_display(i)}</td>
-                                    </tr>
-                                `
-
-                    table.innerHTML+=template
-                }
-            }
+            arraySearch(cn_display, "SnowEx")
         }
 
         else
