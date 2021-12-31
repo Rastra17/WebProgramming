@@ -1888,7 +1888,7 @@ function arraySearch(funcInput, val)
         table.innerHTML+=template
     }
 
-    for(let i=lower;i<=middle;i++)
+    for(let i=lower;i<middle;i++)
     {
         if(funcInput(i)===val)
         {
