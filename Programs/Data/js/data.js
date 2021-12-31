@@ -1869,23 +1869,60 @@ function del()
 
 function arraySearch(funcInput, val)
 {
-    for(let i=0;i<=1825;i++)
-        {
-            if(funcInput(i)===val)
-            {
-                let template=
-                            `
-                                <tr>
-                                    <td>${sc_display(i)}</td>
-                                    <td>${st_display(i)}</td>
-                                    <td>${cn_display(i)}</td>
-                                    <td>${dt_display(i)}</td>
-                                </tr>
-                            `
+    let upper=1825
+    let lower=0
+    const middle=lower+Math.floor((upper-lower)/2)
 
-                table.innerHTML+=template
-            }
+    if(funcInput(middle)===val)
+    {
+        let template=
+        `
+            <tr>
+                <td>${sc_display(middle)}</td>
+                <td>${st_display(middle)}</td>
+                <td>${cn_display(middle)}</td>
+                <td>${dt_display(middle)}</td>
+            </tr>
+        `
+
+        table.innerHTML+=template
+    }
+
+    for(let i=lower;i<=middle;i++)
+    {
+        if(funcInput(i)===val)
+        {
+            let template=
+            `
+                <tr>
+                    <td>${sc_display(i)}</td>
+                    <td>${st_display(i)}</td>
+                    <td>${cn_display(i)}</td>
+                    <td>${dt_display(i)}</td>
+                </tr>
+            `
+
+            table.innerHTML+=template
         }
+    }
+
+    for(let i=middle+1;i<=upper;i++)
+    {
+        if(funcInput(i)===val)
+        {
+            let template=
+            `
+                <tr>
+                    <td>${sc_display(i)}</td>
+                    <td>${st_display(i)}</td>
+                    <td>${cn_display(i)}</td>
+                    <td>${dt_display(i)}</td>
+                </tr>
+            `
+
+            table.innerHTML+=template
+        }
+    }
 }
 
 //For dropdown menu
@@ -2159,14 +2196,14 @@ function mainDisplay()
     {
 
         let template=
-                    `
-                        <tr>
-                        <td>${sc_display(val)}</td>
-                        <td>${st_display(val)}</td>
-                        <td>${cn_display(val)}</td>
-                        <td>${dt_display(val)}</td>
-                        </tr>
-                    `
+        `
+            <tr>
+                <td>${sc_display(val)}</td>
+                <td>${st_display(val)}</td>
+                <td>${cn_display(val)}</td>
+                <td>${dt_display(val)}</td>
+            </tr>
+        `
 
         table.innerHTML+=template
     }
@@ -2175,14 +2212,14 @@ function mainDisplay()
     {
         alert("Array Index OutOfBounds")
         let template=
-                    `
-                        <tr>
-                            <td>N/A</td>
-                            <td>N/A</td>
-                            <td>N/A</td>
-                            <td>N/A</td>
-                        </tr>
-                    `
+        `
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+        `
 
         table.innerHTML+=template
     }
