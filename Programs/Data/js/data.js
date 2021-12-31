@@ -1832,6 +1832,8 @@ var cardata={
 ]
 }
 
+let table=document.querySelector("table")
+
 function sc_display(index)
 {
     let searchItem=cardata.features[index].properties.skyCondition
@@ -1853,53 +1855,730 @@ function cn_display(index)
 function dt_display(index)
 {
     let searchItem=cardata.features[index].properties.Date
+    let year=searchItem.slice(0,4)
+    let month=searchItem.slice(4,6)
+    let day=searchItem.slice(6,8)
+    searchItem=year+'/'+month+'/'+day
     return searchItem
 }
 
-//For dropdown menu
-//let temp=document.getElementById("options")
+function del()
+{
+    $("#Vdata tbody tr").remove()
+}
 
-// temp.addEventListener
-// ("change", (e) => {
-//     const value = e.target.value
+//For dropdown menu
+
+//SkyCondition dropdown
+let skcon=document.getElementById("sky")
+
+skcon.addEventListener
+("change", (e) => {
+    const value = e.target.value
    
-//     if (value) 
-//     {
-//         console.log(sc_display(value))
-//         console.log(st_display(value))
-//         console.log(cn_display(value))
-//         console.log(dt_display(value))
-//     }
-//     else 
-//     {
-//         console.log("Value not found")
-//     }
-//   }
-// )
+    if (value) 
+    {
+        if(value==="--Select--")
+        {
+            alert("Please select other options")
+        }
+
+        else if(value==="clear")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(sc_display(i)==="clear")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="cloudy")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(sc_display(i)==="cloudy")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+    }
+    else 
+    {
+        console.log("Value not found")
+    }
+  }
+)
+
+//SurfaceType dropdown
+let surpe=document.getElementById("sur")
+
+surpe.addEventListener
+("change", (e) => {
+    const value = e.target.value
+   
+    if (value) 
+    {
+        if(value==="--Select--")
+        {
+            alert("Please select other options")
+        }
+
+        else if(value==="vegetation")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(st_display(i)==="vegetation")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="ocean or lake")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(st_display(i)==="ocean or lake")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="smoke")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(st_display(i)==="smoke")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="clouds")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(st_display(i)==="clouds")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="mixed")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(st_display(i)==="mixed")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="barren")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(st_display(i)==="barren")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="snow ice")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(st_display(i)==="snow ice")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="skyBRDF")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(st_display(i)==="skyBRDF")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else
+        {
+            alert("Value does not exist")
+        }
+
+    }
+    else 
+    {
+        console.log("Value not found")
+    }
+  }
+)
+
+//Campaign dropdown
+let camgn=document.getElementById("camp")
+
+camgn.addEventListener
+("change", (e) => {
+    const value = e.target.value
+   
+    if (value) 
+    {
+        if(value==="--Select--")
+        {
+            alert("Please select other options")
+        }
+
+        else if(value==="TARFOX")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(cn_display(i)==="TARFOX")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="Skukuza2005")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(cn_display(i)==="Skukuza2005")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="SCAR-A")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(cn_display(i)==="SCAR-A")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="Kuwait")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(cn_display(i)==="Kuwait")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="FireAce")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(cn_display(i)==="FireAce")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="SCARB")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(cn_display(i)==="SCARB")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="DiscoverAQ")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(cn_display(i)==="DiscoverAQ")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="ARCTAS")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(cn_display(i)==="ARCTAS")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="LEADEX")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(cn_display(i)==="LEADEX")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="CLAMS")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(cn_display(i)==="CLAMS")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="ARMCAS")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(cn_display(i)==="ARMCAS")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="SAFARI2000")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(cn_display(i)==="SAFARI2000")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="INTEX-B")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(cn_display(i)==="INTEX-B")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="CLASIC")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(cn_display(i)==="CLASIC")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="Eco3D")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(cn_display(i)==="Eco3D")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else if(value==="SnowEx")
+        {
+            del()
+
+            for(let i=0;i<=1825;i++)
+            {
+                if(cn_display(i)==="SnowEx")
+                {
+                    let template=
+                                `
+                                    <tr>
+                                        <td>${sc_display(i)}</td>
+                                        <td>${st_display(i)}</td>
+                                        <td>${cn_display(i)}</td>
+                                        <td>${dt_display(i)}</td>
+                                    </tr>
+                                `
+
+                    table.innerHTML+=template
+                }
+            }
+        }
+
+        else
+        {
+            alert("Value does not exist")
+        }
+
+    }
+    else 
+    {
+        console.log("Value not found")
+    }
+  }
+)
 
 //For textbox with Submit button function
 function mainDisplay()
 {
-    var val = document.getElementById("textbox").value;
+    del()
+
+    const val = document.getElementById("textbox").value;
     
     if(val>=0 && val<=1825)
     {
-        sc.innerHTML=sc_display(val)
-        st.innerHTML=st_display(val)
-        cn.innerHTML=cn_display(val)
-        let date=dt_display(val)
-        let year=date.slice(0,4)
-        let month=date.slice(4,6)
-        let day=date.slice(6,8)
-        dt.innerHTML=year+'/'+month+'/'+day
+
+        let template=
+                    `
+                        <tr>
+                        <td>${sc_display(val)}</td>
+                        <td>${st_display(val)}</td>
+                        <td>${cn_display(val)}</td>
+                        <td>${dt_display(val)}</td>
+                        </tr>
+                    `
+
+        table.innerHTML+=template
     }
 
     else
     {
         alert("Array Index OutOfBounds")
-        sc.innerHTML="N/A"
-        st.innerHTML="N/A"
-        cn.innerHTML="N/A"
-        dt.innerHTML="N/A"
+        let template=
+                    `
+                        <tr>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                        </tr>
+                    `
+
+        table.innerHTML+=template
     }
 }

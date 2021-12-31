@@ -7,7 +7,6 @@
 body
 {
     padding-left:10px;
-    background: url("../img/DataBG.jpeg");
     min-height: 100v;
     background-size: 100vw 105vh;
     background-repeat: no-repeat;
@@ -34,7 +33,7 @@ th, td
 
 table, th, td
 {
-    border: 1px solid aquamarine;
+    border: 1px solid black;
 }
 
 th, td
@@ -50,30 +49,21 @@ th, td
 #dt
 {
     width: 125px;
-    color: aquamarine;
 }
 
 #sc
 {
     width: 115px;
-    color: aquamarine;
 }
 
 #cn
 {
     width: 175px;
-    color: aquamarine;
 }
 
 #st
 {
     width: 225px;
-    color: aquamarine;
-}
-
-.column
-{
-    color: aquamarine;
 }
 
 #content
@@ -90,8 +80,8 @@ button
     border: 4px double #cccccc;
     color: #eeeeee;
     text-align: center;
-    font-size: 25px;
-    width: 100px;
+    font-size: 15px;
+    width: 70px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
@@ -138,5 +128,25 @@ button:hover span:after
     border: 4px double #cccccc;
     color: #d63975;
     text-align: center;
-    font-size: 25px;
+    font-size: 15px;
+    width: 150px;
+}
+
+p1, p2, p3
+{
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+#sky, #sur, #camp
+{
+    border-radius: 10px;
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #d63975;
+    text-align: center;
+    font-size: 15px;
+    width: 150px;
 }
