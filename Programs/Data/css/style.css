@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
 *
 {
     margin: 0px;
@@ -6,9 +8,7 @@
 
 body
 {
-    padding-left:10px;
-    min-height: 100v;
-    background-size: 100vw 105vh;
+    background-size: 100vw 100vh;
     background-repeat: no-repeat;
 }
 
