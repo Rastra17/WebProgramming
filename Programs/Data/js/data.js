@@ -1934,15 +1934,15 @@ let skcon=document.getElementById("sky")
 skcon.addEventListener
 ("change", (e) => {
     const value = e.target.value
+
+    document.getElementById("sur").selectedIndex = 0
+    document.getElementById("camp").selectedIndex = 0
+    document.getElementById("textbox").value = ""
    
     if (value) 
     {
-        if(value==="--Select--")
-        {
-            alert("Please select other options")
-        }
 
-        else if(value==="clear")
+        if(value==="clear")
         {
             del()
 
@@ -1970,15 +1970,15 @@ let surpe=document.getElementById("sur")
 surpe.addEventListener
 ("change", (e) => {
     const value = e.target.value
+
+    document.getElementById("sky").selectedIndex = 0
+    document.getElementById("camp").selectedIndex = 0
+    document.getElementById("textbox").value = ""
    
     if (value) 
     {
-        if(value==="--Select--")
-        {
-            alert("Please select other options")
-        }
 
-        else if(value==="vegetation")
+        if(value==="vegetation")
         {
             del()
 
@@ -2034,11 +2034,6 @@ surpe.addEventListener
             arraySearch(st_display, "skyBRDF")
         }
 
-        else
-        {
-            alert("Value does not exist")
-        }
-
     }
     else 
     {
@@ -2053,15 +2048,15 @@ let camgn=document.getElementById("camp")
 camgn.addEventListener
 ("change", (e) => {
     const value = e.target.value
+
+    document.getElementById("sky").selectedIndex = 0
+    document.getElementById("sur").selectedIndex = 0
+    document.getElementById("textbox").value = ""
    
     if (value) 
     {
-        if(value==="--Select--")
-        {
-            alert("Please select other options")
-        }
 
-        else if(value==="TARFOX")
+        if(value==="TARFOX")
         {
             del()
 
@@ -2173,11 +2168,6 @@ camgn.addEventListener
             arraySearch(cn_display, "SnowEx")
         }
 
-        else
-        {
-            alert("Value does not exist")
-        }
-
     }
     else 
     {
@@ -2190,6 +2180,10 @@ camgn.addEventListener
 function mainDisplay()
 {
     del()
+
+    document.getElementById("sky").selectedIndex = 0
+    document.getElementById("sur").selectedIndex = 0
+    document.getElementById("camp").selectedIndex = 0
 
     const val = document.getElementById("textbox").value;
     
