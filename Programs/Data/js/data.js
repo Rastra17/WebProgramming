@@ -1869,13 +1869,14 @@ function del()
 
 function arraySearch(funcInput, val)
 {
+    let template=``
     let upper=1825
     let lower=0
     const middle=lower+Math.floor((upper-lower)/2)
 
     if(funcInput(middle)===val)
     {
-        let template=
+        template=
         `
             <tr>
                 <td>${sc_display(middle)}</td>
@@ -1892,7 +1893,7 @@ function arraySearch(funcInput, val)
     {
         if(funcInput(i)===val)
         {
-            let template=
+            template=
             `
                 <tr>
                     <td>${sc_display(i)}</td>
@@ -1910,7 +1911,7 @@ function arraySearch(funcInput, val)
     {
         if(funcInput(i)===val)
         {
-            let template=
+            template=
             `
                 <tr>
                     <td>${sc_display(i)}</td>
