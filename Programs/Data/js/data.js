@@ -1870,44 +1870,9 @@ function del()
 function arraySearch(funcInput, val)
 {
     let template=``
-    let upper=1825
-    let lower=0
-    const middle=lower+Math.floor((upper-lower)/2)
+    let len=cardata.features.length
 
-    if(funcInput(middle)===val)
-    {
-        template=
-        `
-            <tr>
-                <td>${sc_display(middle)}</td>
-                <td>${st_display(middle)}</td>
-                <td>${cn_display(middle)}</td>
-                <td>${dt_display(middle)}</td>
-            </tr>
-        `
-
-        table.innerHTML+=template
-    }
-
-    for(let i=lower;i<middle;i++)
-    {
-        if(funcInput(i)===val)
-        {
-            template=
-            `
-                <tr>
-                    <td>${sc_display(i)}</td>
-                    <td>${st_display(i)}</td>
-                    <td>${cn_display(i)}</td>
-                    <td>${dt_display(i)}</td>
-                </tr>
-            `
-
-            table.innerHTML+=template
-        }
-    }
-
-    for(let i=middle+1;i<=upper;i++)
+    for(let i=0;i<len;i++)
     {
         if(funcInput(i)===val)
         {
