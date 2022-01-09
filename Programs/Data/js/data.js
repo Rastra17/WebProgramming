@@ -1871,7 +1871,7 @@ function arraySearch(funcInput, val)
 {
     let dataTemplate=``
     let len=cardata.features.length
-
+    
     for(let i=0;i<len;i++)
     {
         if(funcInput(i)===val)

@@ -1,86 +1,99 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <header class="header">
-        Display Contents
-    </header>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display Data</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Display Data</title>
 
-    <div class="headline">
-        <input type="text" id="textbox" name="" placeholder="Enter Index Number">
-        <button onclick="mainDisplay()" id="btn" type="button">Check</button>
+        <header class="header">
+            Display Contents
+        </header>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+        <div class="loader">
         
-        <p1>skyCondition</p1>
-        <select id="sky">
-            <option>--Select--</option>
-            <option>clear</option>
-            <option>cloudy</option>
-        </select>
+            <div class="inner" id="loading">
 
-        <p2>SurfaceType</p2>
-        <select id="sur">
-            <option>--Select--</option>
-            <option>vegetation</option>
-            <option>ocean or lake</option>
-            <option>smoke</option>
-            <option>clouds</option>
-            <option>mixed</option>
-            <option>barren</option>
-            <option>snow ice</option>
-            <option>skyBRDF</option>
-        </select>
-
-        <p3>Campaign</p3>
-        <select id="camp">
-            <option>--Select--</option>
-            <option>TARFOX</option>
-            <option>Skukuza2005</option>
-            <option>SCAR-A</option>
-            <option>Kuwait</option>
-            <option>FireAce</option>
-            <option>SCARB</option>
-            <option>DiscoverAQ</option>
-            <option>ARCTAS</option>
-            <option>LEADEX</option>
-            <option>CLAMS</option>
-            <option>ARMCAS</option>
-            <option>SAFARI2000</option>
-            <option>INTEX-B</option>
-            <option>CLASIC</option>
-            <option>Eco3D</option>
-            <option>SnowEx</option>
-        </select>
-
-    </div>
-
-    <div class="container">
-        <table id="Vdata">
-            <caption id="content"><b>Content List</b></caption>
-            <thead>
-                <b>
-                    <th class="column">skyCondition</th>
-                    <th class="column">SurfaceType</th>
-                    <th class="column">Campaign</th>
-                    <th class="column">Date</th>
-                </b>
-            </thead>
+            </div>
     
-            <tr>
-                <td id="sc">N/A</td>
-                <td id="st">N/A</td>
-                <td id="cn">N/A</td>
-                <td id="dt">N/A</td>
-            </tr>
-        </table>
-    </div>
+        </div>
+
+        <div class="headline">
+
+            <input type="text" id="textbox" name="" placeholder="Enter Index Number">
+            <button onclick="mainDisplay()" id="btn" type="button">Check</button>
+        
+            <p1>skyCondition</p1>
+            <select id="sky">
+                <option>--Select--</option>
+                <option>clear</option>
+                <option>cloudy</option>
+            </select>
+
+            <p2>SurfaceType</p2>
+            <select id="sur">
+                <option>--Select--</option>
+                <option>vegetation</option>
+                <option>ocean or lake</option>
+                <option>smoke</option>
+                <option>clouds</option>
+                <option>mixed</option>
+                <option>barren</option>
+                <option>snow ice</option>
+                <option>skyBRDF</option>
+            </select>
+
+            <p3>Campaign</p3>
+            <select id="camp">
+                <option>--Select--</option>
+                <option>TARFOX</option>
+                <option>Skukuza2005</option>
+                <option>SCAR-A</option>
+                <option>Kuwait</option>
+                <option>FireAce</option>
+                <option>SCARB</option>
+                <option>DiscoverAQ</option>
+                <option>ARCTAS</option>
+                <option>LEADEX</option>
+                <option>CLAMS</option>
+                <option>ARMCAS</option>
+                <option>SAFARI2000</option>
+                <option>INTEX-B</option>
+                <option>CLASIC</option>
+                <option>Eco3D</option>
+                <option>SnowEx</option>
+            </select>
+
+        </div>
+
+        <div class="container">
+            <table id="Vdata">
+                <caption id="content"><b>Content List</b></caption>
+                <thead>
+                    <b>
+                        <th class="column">skyCondition</th>
+                        <th class="column">SurfaceType</th>
+                        <th class="column">Campaign</th>
+                        <th class="column">Date</th>
+                    </b>
+                </thead>
     
-    <script src="../js/data.js"></script>
-</body>
+                <tr>
+                    <td id="sc">N/A</td>
+                    <td id="st">N/A</td>
+                    <td id="cn">N/A</td>
+                    <td id="dt">N/A</td>
+                </tr>
+            </table>
+        </div>
+    
+        <script src="../js/data.js"></script>
+    </body>
 </html>
