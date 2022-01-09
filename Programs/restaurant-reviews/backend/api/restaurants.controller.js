@@ -47,7 +47,7 @@ export default class RestaurantsController
         try
         {
             let id=req.params.id || {};
-            let restaurant=await RestaurantsDAO.getRestaurantByID(id);
+            let restaurant=await RestaurantsDAO.getRestaurantbyID(id);
             if(!restaurant)
             {
                 res.status(404).json({error: "Not found"});

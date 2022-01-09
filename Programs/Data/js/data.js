@@ -1869,14 +1869,14 @@ function del()
 
 function arraySearch(funcInput, val)
 {
-    let template=``
+    let dataTemplate=``
     let len=cardata.features.length
 
     for(let i=0;i<len;i++)
     {
         if(funcInput(i)===val)
         {
-            template=
+            dataTemplate=
             `
                 <tr>
                     <td>${sc_display(i)}</td>
@@ -1886,7 +1886,7 @@ function arraySearch(funcInput, val)
                 </tr>
             `
 
-            table.innerHTML+=template
+            table.innerHTML+=dataTemplate
         }
     }
 }
