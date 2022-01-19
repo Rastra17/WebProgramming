@@ -1891,6 +1891,13 @@ function arraySearch(funcInput, val)
     }
 }
 
+//For progress-bar
+const loader=()=>
+{
+    const progressBar=document.querySelector(".progress_bar")
+    progressBar.setAttribute("id","play-animation")
+}
+
 //For dropdown menu
 
 //SkyCondition dropdown

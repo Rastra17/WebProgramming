@@ -1,0 +1,26 @@
+.box
+{
+    height: 25px;
+    background-color: #ccc;
+    position:relative;
+    border-radius: 7px;
+}
+
+.box .progress_bar
+{
+    position: absolute;
+    height: 100%;
+    background-color: rgb(125,44,255);
+    border-radius: 7px;
+}
+
+#play-animation
+{
+    animation:progress_animation 5s forwards;
+}
+
+@keyframes progress_animation
+{
+    0% {width:0%;}
+    100% {width:100%}
+}
