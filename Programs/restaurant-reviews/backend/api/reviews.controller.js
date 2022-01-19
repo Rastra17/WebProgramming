@@ -38,6 +38,8 @@ export default class ReviewsController
             const text=req.body.text;
             const date=new Date();
 
+            console.log(reviewId,text,date)
+
             const reviewResponse=await ReviewsDAO.updateReview
             (
                 reviewId,
@@ -72,7 +74,9 @@ export default class ReviewsController
         {
             const reviewId=req.query.id;
             const userId=req.body.user_id;
-            console.log(reviewId);
+
+            console.log(reviewId,userId);
+
             const reviewResponse=await ReviewsDAO.deleteReview
             (
                 reviewId,

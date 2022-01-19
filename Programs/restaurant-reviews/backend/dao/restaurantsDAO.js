@@ -97,6 +97,7 @@ export default class RestaurantsDAO
                         {
                             id: "$_id"
                         },
+
                         pipeline:
                         [
                             {
@@ -108,6 +109,7 @@ export default class RestaurantsDAO
                                     }
                                 }
                             },
+                            
                             {
                                 $sort:
                                 {

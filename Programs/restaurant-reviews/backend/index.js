@@ -3,6 +3,7 @@ import mongodb from "mongodb";
 import dotenv from "dotenv";
 import RestaurantsDAO from "./dao/restaurantsDAO.js";
 import ReviewsDAO from "./dao/reviewsDAO.js";
+
 dotenv.config();
 const MongoClient= mongodb.MongoClient;
 
@@ -19,8 +20,8 @@ MongoClient.connect
 .catch
 (err=>
     {
-        console.error(err.stack)
-        process.exit(1)
+        console.error(err.stack);
+        process.exit(1);
     }
 )
 .then
@@ -30,7 +31,7 @@ MongoClient.connect
         await ReviewsDAO.injectDB(client);
         app.listen(port, ()=>
         {
-            console.log(`Listening on port ${port}`);
+            console.log(`Server hosted at http://localhost:${port}/api/v1/restaurants`);
         });
     }
 );
