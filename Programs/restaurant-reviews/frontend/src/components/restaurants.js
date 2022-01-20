@@ -69,7 +69,7 @@ const Restaurant = props =>
             {restaurant.reviews.length > 0 ? (
              restaurant.reviews.map((review, index) => {
                return (
-                 <div className="col-lg-4 pb-1" key={index}>
+                 <div className="col-lg-4 pb-1" key={review.user_id}>
                    <div className="card">
                      <div className="card-body">
                        <p className="card-text">
