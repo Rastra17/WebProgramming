@@ -4,7 +4,7 @@ class RestaurantDataService
 {
   getAll(page = 0)
   {
-    return http.get(`?page${page}`);
+    return http.get(`?page=${page}`);
   }
 
   get(id)
