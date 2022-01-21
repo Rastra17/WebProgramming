@@ -125,8 +125,7 @@ const RestaurantsList = props =>
                         <button
                             className="btn btn-outline-secondary"
                             type="button"
-                            onClick={findByName}
-                        >
+                            onClick={findByName}>
                             Search
                         </button>
                     </div>
@@ -152,10 +151,11 @@ const RestaurantsList = props =>
                 <div className="input-group col-lg-4">
 
                     <select onChange={onChangeSearchCuisine}>
-                        {cuisines.map(cuisine => {
-                        return (
-                            <option value={cuisine}> {cuisine.substr(0, 20)} </option>
-                        )
+                        {cuisines.map(cuisine =>
+                        {
+                            return (
+                                <option value={cuisine}> {cuisine.substr(0, 20)} </option>
+                            )
                         })}
                     </select>
                     <div className="input-group-append">
@@ -172,7 +172,8 @@ const RestaurantsList = props =>
             </div>
         
             <div className="row">
-                {restaurants.map((restaurant) => {
+                {restaurants.map((restaurant) =>
+                {
                     const address = `${restaurant.address.building} ${restaurant.address.street}, ${restaurant.address.zipcode}`;
                     return (
                         <div className="col-lg-4 pb-1" key={restaurant._id}>
