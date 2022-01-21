@@ -89,13 +89,15 @@ const Restaurant = props =>
                                             <div className="row">
                                                 <a onClick={() => deleteReview(review._id, index)} className="btn btn-primary col-lg-5 mx-1 mb-1">Delete</a>
                                                 <Link to=
-                                                {{
-                                                    pathname: "/restaurants/" + props.match.params.id + "/review",
-                                                    state:
+                                                {
                                                     {
-                                                        currentReview: review
+                                                        pathname: "/restaurants/" + props.match.params.id + "/review",
+                                                        state:
+                                                        {
+                                                            currentReview: review
+                                                        }
                                                     }
-                                                }} className="btn btn-primary col-lg-5 mx-1 mb-1">Edit</Link>
+                                                } className="btn btn-primary col-lg-5 mx-1 mb-1">Edit</Link>
                                             </div>                   
                                         }
                                     </div>

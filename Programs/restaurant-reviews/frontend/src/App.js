@@ -35,7 +35,7 @@ function App()
                         </li>
                         <li className="nav-item" >
                             { user ? (
-                                <a onClick={logout} className="nav-link" style={{cursor:'pointer'}}>
+                                <a onClick={logout} className="nav-link" style={{cursor:'pointer'}} href="/restaurants">
                                     Logout {user.name}
                                 </a>
                             ) : (            
