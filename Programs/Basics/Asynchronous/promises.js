@@ -48,9 +48,9 @@ order(4000, () => console.log(`-> ${stocks.Fruit[0]} was selected`))
 })
 
 .catch(() => {
-    console.log(":) Come back another time")
+    console.log(":) Come back another time");
 })
 
 .finally(() => {
-    console.log("Working hours over, Good day!")
+    console.log("()- Working hours over, Good day!");
 });
