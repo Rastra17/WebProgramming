@@ -1,0 +1,17 @@
+<friendList>
+    <friend>
+        <name>Alex</name>
+    </friend>
+    <friend>
+        <name>Mary</name>
+    </friend>
+    <friend>
+        <name>Ron</name>
+    </friend>
+    <friend>
+        <name>Harry</name>
+    </friend>
+    <bestFriend>
+        <name>Hermione</name>
+    </bestFriend>
+</friendList>
