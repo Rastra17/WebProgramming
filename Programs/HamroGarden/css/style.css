@@ -2,14 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
 
-*
-{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-body
-{
+body {
     font-family: 'Baloo Bhai 2', cursive;
     background: url("../WebBG.png");
     min-height: 100vh;
@@ -18,8 +16,7 @@ body
     color: white;
 }
 
-.left
-{
+.left {
     position: absolute;
     left: 35px;
     top: 20px;
@@ -27,8 +24,7 @@ body
     border: 2px;
 }
 
-.left div
-{
+.left div {
     line-height: 20px;
     font-size: 25px;
     color: rgb(255, 255, 255);
@@ -37,24 +33,21 @@ body
     align-items: center;
 }
 
-.left img
-{
-    width:85px;
-    height:75px;
+.left img {
+    width: 85px;
+    height: 75px;
     filter: invert(100%);
-    padding-left:40px;
+    padding-left: 40px;
 }
 
-.mid
-{
+.mid {
     display: block;
-    width:45%;
+    width: 45%;
     margin: 20px auto;
     border: 2px;
 }
 
-.right
-{
+.right {
     position: absolute;
     right: 32px;
     top: 20px;
@@ -62,37 +55,31 @@ body
     border: 2px;
 }
 
-.navbar
-{
+.navbar {
     display: inline-block;
 }
 
-.navbar li
-{
+.navbar li {
     display: inline-block;
     font-size: 25px;
 }
 
-.navbar li a
-{
+.navbar li a {
     color: white;
     text-decoration: none;
     padding: 34px 23px;
 }
 
-.navbar li a:hover
-{
+.navbar li a:hover {
     text-decoration: underline;
     color: grey;
 }
 
-.navbar li a.active
-{
+.navbar li a.active {
     color: rgb(210, 255, 127);
 }
 
-.btn
-{
+.btn {
     font-family: 'Baloo Bhai 2', cursive;
     margin: 0px 9px;
     color: white;
@@ -104,13 +91,11 @@ body
     cursor: pointer;
 }
 
-.btn:hover
-{
+.btn:hover {
     background-color: grey;
 }
 
-.container
-{
+.container {
     border: 2px;
     margin: 100px 35px;
     padding: 25px;
@@ -118,8 +103,7 @@ body
     border-radius: 2px;
 }
 
-.formGroup input
-{
+.formGroup input {
     text-align: center;
     font-family: 'Baloo Bhai 2', cursive;
     display: block;
@@ -131,13 +115,11 @@ body
     border-radius: 8px;
 }
 
-.container h1
-{
+.container h1 {
     text-align: center;
 }
 
-.container button
-{
+.container button {
     display: block;
     width: 82%;
     margin: auto;

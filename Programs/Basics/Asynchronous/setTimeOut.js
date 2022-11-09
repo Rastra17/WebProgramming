@@ -12,7 +12,6 @@ console.log("\n");
 //setTimeout function runs a function after a specified time.
 setTimeout(myFunction, 3000);
 
-function myFunction()
-{
+function myFunction() {
     console.log("Go back home now");
 }

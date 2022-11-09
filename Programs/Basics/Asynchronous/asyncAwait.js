@@ -1,32 +1,27 @@
 
 let stocks = {
-    Fruit : ["strawberry", "grapes", "banana", "apple"],
-    Liquid : ["water", "ice"],
-    Holder : ["cone", "cup", "stick"],
-    Topping : ["chocolate", "peanuts"]
+    Fruit: ["strawberry", "grapes", "banana", "apple"],
+    Liquid: ["water", "ice"],
+    Holder: ["cone", "cup", "stick"],
+    Topping: ["chocolate", "peanuts"]
 };
 
 //The deciding factor of the code
 let isShopOpen = true;
 
-function time(ms)
-{
-    return new Promise( (resolve, reject) => {
-        if(isShopOpen)
-        {
+function time(ms) {
+    return new Promise((resolve, reject) => {
+        if (isShopOpen) {
             setTimeout(resolve, ms);
         }
-        else
-        {
+        else {
             reject(console.log("-_- Sorry! We are closed"))
         }
-    } )
+    })
 }
 
-async function kitchen()
-{
-    try
-    {
+async function kitchen() {
+    try {
         await time(2000);
         console.log(`-> ${stocks.Fruit[3]} was selected`);
 
@@ -51,12 +46,10 @@ async function kitchen()
         await time(5000);
         console.log("-> Serve the ice cream");
     }
-    catch(error)
-    {
+    catch (error) {
         console.log(":) Come back another time");
     }
-    finally
-    {
+    finally {
         console.log("()- Working hours over, Good day!");
     }
 }

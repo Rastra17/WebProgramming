@@ -1,25 +1,24 @@
 
 let stocks = {
-    Fruit : ["strawberry", "grapes", "banana", "apple"],
-    Liquid : ["water", "ice"],
-    Holder : ["cone", "cup", "stick"],
-    Topping : ["chocolate", "peanuts"]
+    Fruit: ["strawberry", "grapes", "banana", "apple"],
+    Liquid: ["water", "ice"],
+    Holder: ["cone", "cup", "stick"],
+    Topping: ["chocolate", "peanuts"]
 };
 
 let isShopOpen = false;
 
 let toppingChoice = () => {
-    return new Promise( (resolve, reject) => {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(
                 console.log("-> Which topping would you love?")
             );
         }, 3000)
-    } )
+    })
 };
 
-async function kitchen()
-{
+async function kitchen() {
     console.log(`-> ${stocks.Fruit[0]} was selected`);
     console.log("-> Production has started");
     console.log("-> The fruit has been chopped");

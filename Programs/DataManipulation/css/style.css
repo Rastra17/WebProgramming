@@ -1,76 +1,66 @@
-*
-{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-body
-{
+body {
     background-size: 100vw 100vh;
 }
 
-.header
-{
+.header {
     min-height: 10vh;
     background-repeat: no-repeat;
     color: rgb(207, 170, 47);
     font-size: 45px;
 }
 
-table
-{
+table {
     width: 600px;
 
 }
 
-th, td
-{
+th,
+td {
     text-align: center;
 }
 
-table, th, td
-{
+table,
+th,
+td {
     border: 1px solid black;
 }
 
-th, td
-{
+th,
+td {
     padding: 5px;
 }
 
-#textbox
-{
+#textbox {
     text-align: center;
 }
 
-#dt
-{
+#dt {
     width: 125px;
 }
 
-#sc
-{
+#sc {
     width: 115px;
 }
 
-#cn
-{
+#cn {
     width: 175px;
 }
 
-#st
-{
+#st {
     width: 225px;
 }
 
-#content
-{
-    color:rgba(247, 83, 34, 0.781);
+#content {
+    color: rgba(247, 83, 34, 0.781);
     font-size: 22px;
 }
 
-button 
-{
+button {
     display: inline-block;
     background-color: #7b38d8;
     border-radius: 10px;
@@ -83,15 +73,15 @@ button
     cursor: pointer;
     margin: 5px;
 }
-button span 
-{
+
+button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
-button span:after 
-{
+
+button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -100,24 +90,20 @@ button span:after
     transition: 0.5s;
 }
 
-button:hover 
-{
+button:hover {
     background-color: #f7c2f9;
 }
-  
-button:hover span 
-{
+
+button:hover span {
     padding-right: 25px;
 }
-  
-button:hover span:after 
-{
+
+button:hover span:after {
     opacity: 1;
     right: 0;
 }
 
-#textbox
-{
+#textbox {
     border-radius: 10px;
     display: inline-block;
     background-color: #ffffff;
@@ -129,14 +115,16 @@ button:hover span:after
     width: 150px;
 }
 
-p1, p2, p3
-{
+p1,
+p2,
+p3 {
     padding-left: 5px;
     font-size: 15px;
 }
 
-#sky, #sur, #camp
-{
+#sky,
+#sur,
+#camp {
     border-radius: 10px;
     display: inline-block;
     background-color: #ffffff;
@@ -148,7 +136,8 @@ p1, p2, p3
     width: 150px;
 }
 
-.header, .headline, .container
-{
+.header,
+.headline,
+.container {
     margin-left: 10px;
 }
