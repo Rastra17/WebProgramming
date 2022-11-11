@@ -11,20 +11,20 @@ let logEvents = function(msg) {
     return logs
 }
 
-let checkFile = new File("./logFile.txt")
+const path = "./logFile.txt"
 
-if(checkFile.exists()) {
-    fs.writeFile("./reply.txt", logEvents("Just logging in!"), (err) => {
-        if (err) {
-            console.error(err)
-        }
-        console.log("Successfully created!")
-    })
-} else {
-    fs.appendFile("./reply.txt", "\nGood to see you", (err) => {
+if(fs.existsSync(path)) {
+    fs.appendFile(path, '\n' + logEvents("Just checking if it works!"), (err) => {
         if (err) {
             console.error(err)
         }
         console.log("Successfully added!")
+    })
+} else {
+    fs.writeFile(path, logEvents("Just logging in!"), (err) => {
+        if (err) {
+            console.error(err)
+        }
+        console.log("Successfully created!")
     })
 }
