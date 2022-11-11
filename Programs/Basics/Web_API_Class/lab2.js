@@ -13,6 +13,23 @@ fs.readFile("./example.txt", "utf-8", (err, data) => {
     console.log(data)
 })
 
+fs.writeFile("./reply.txt", "This is wonderful", (err) => {
+    if (err) {
+        console.error(err)
+    }
+    fs.appendFile("./reply.txt", "\nGood to see you", (err) => {
+        if (err) {
+            console.error(err)
+        }
+        fs.rename("./reply.txt", "demo.txt", (err) => {
+            if (err) {
+                console.error(err)
+            }
+        })
+    })
+    console.log("Successful")
+})
+
 // console.log(os.version())
 // console.log(os.type())
 // console.log(os.homedir())

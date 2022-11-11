@@ -7,7 +7,7 @@ let stocks = {
 };
 
 //The deciding factor of the code
-let isShopOpen = false;
+let isShopOpen = true;
 
 let order = (time, work) => {
     return new Promise((resolve, reject) => {
