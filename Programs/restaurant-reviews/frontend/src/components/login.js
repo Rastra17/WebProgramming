@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-const Login = props =>
-{
+const Login = props => {
 
     const initialUserState =
     {
@@ -11,14 +10,12 @@ const Login = props =>
 
     const [user, setUser] = useState(initialUserState);
 
-    const handleInputChange = event =>
-    {
+    const handleInputChange = event => {
         const { name, value } = event.target;
         setUser({ ...user, [name]: value });
     };
 
-    const login = () =>
-    {
+    const login = () => {
         props.login(user);
         props.history.push('/');
     }

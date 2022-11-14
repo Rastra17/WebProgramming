@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import RestaurantDataService from "../services/restaurant";
 import { Link } from "react-router-dom";
 
-const AddReview = props =>
-{
+const AddReview = props => {
     let initialReviewState = "";
 
     let editing = false;
 
-    if (props.location.state && props.location.state.currentReview)
-    {
+    if (props.location.state && props.location.state.currentReview) {
         editing = true;
         initialReviewState = props.location.state.currentReview.text;
     }
@@ -17,13 +15,11 @@ const AddReview = props =>
     const [review, setReview] = useState(initialReviewState);
     const [submitted, setSubmitted] = useState(false);
 
-    const handleInputChange = event =>
-    {
+    const handleInputChange = event => {
         setReview(event.target.value);
     };
 
-    const saveReview = () =>
-    {
+    const saveReview = () => {
         var data =
         {
             text: review,
@@ -32,41 +28,35 @@ const AddReview = props =>
             restaurant_id: props.match.params.id
         };
 
-        if (editing)
-        {
+        if (editing) {
             data.review_id = props.location.state.currentReview._id;
             RestaurantDataService.updateReview(data)
-            .then(response =>
-                {
+                .then(response => {
                     setSubmitted(true);
                     console.log(response.data);
                 }
-            )
-            .catch(e =>
-                {
+                )
+                .catch(e => {
                     console.log(e);
                 }
-            );
+                );
         }
-        else
-        {
+        else {
             RestaurantDataService.createReview(data)
-            .then(response =>
-                {
-                setSubmitted(true);
-                console.log(response.data);
+                .then(response => {
+                    setSubmitted(true);
+                    console.log(response.data);
                 }
-            )
-            .catch(e =>
-                {
-                console.log(e);
+                )
+                .catch(e => {
+                    console.log(e);
                 }
-            );
+                );
         }
 
     };
 
-    return(
+    return (
         <div>
             {props.user ? (
                 <div className="submit-form">
@@ -81,7 +71,7 @@ const AddReview = props =>
                         ) : (
                             <div>
                                 <div className="form-group">
-                                    <label htmlFor="description">{ editing ? "Edit" : "Create" } Review</label>
+                                    <label htmlFor="description">{editing ? "Edit" : "Create"} Review</label>
                                     <input
                                         type="text"
                                         className="form-control"
@@ -100,7 +90,7 @@ const AddReview = props =>
                     }
                 </div>
 
-                ) : (
+            ) : (
                 <div>
                     Please log in.
                 </div>
