@@ -17,7 +17,7 @@ const saveLogItem = (logItem) => {
     } 
     fs.appendFile(path.join(__dirname, 'logs', 'logged_message.txt'), logItem, (err) => {
         if(err) throw err;
-        console.log('Saved')
+        console.log('Saved in Logs')
     })
 }
 

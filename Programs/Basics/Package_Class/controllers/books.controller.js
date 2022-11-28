@@ -1,7 +1,7 @@
 const books = require("../data/books");
 
 const getAllBooks = (req, res) => {
-    res.staus(200).json(books)
+    res.status(200).json(books)
 }
 const addBook = (req, res) => {
     let new_book = {
@@ -10,18 +10,24 @@ const addBook = (req, res) => {
         "author": req.body.author,
         "category": req.body.category
     }
-    books.push(new_book);
+    books.push(new_book)
     res.json(books)
 }
 const updateBook = (req, res) => {
-    res.status(501).json({
-        error: 'Cannot update the read-only file.'
+    let updatedBooks = books.map((item) => {
+        if(item.id == req.params.id) {
+            item.title = req.body.title
+            item.author = req.body.author
+        }
+        return item
     })
+    res.json(updatedBooks)
 }
-const deleteAllBooks = (req, res) => {
-    res.status(501).json({
-        error: 'Cannot delete the read-only file.'
+const deleteBook = (req, res) => {
+    let newList = books.filter((item) => {
+        return item.id != req.params.id
     })
+    res.json(newList)
 }
 
 const getBookById = (req, res) => {
@@ -37,6 +43,6 @@ const getBookById = (req, res) => {
 }
 
 module.exports = {
-    getAllBooks, addBook, updateBook, deleteAllBooks,
-    getBookById,
+    getAllBooks, addBook, updateBook, deleteBook,
+    getBookById, updateBook, deleteBook
 }
