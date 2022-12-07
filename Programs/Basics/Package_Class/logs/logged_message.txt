@@ -116,3 +116,13 @@ a59185c9-2b5a-42da-b10b-bb1d7b9bf7c9 	 2022:12:07 	09:37:56 	 info 	 GET 	 /book
 2893d149-dd5f-453d-a27e-1f816f077852 	 2022:12:07 	09:38:08 	 info 	 GET 	 /books/ 
 aa9b68d3-4eca-4c7f-88f4-137af6441c76 	 2022:12:07 	09:41:56 	 info 	 GET 	 /books/ 
 edc8f452-6ea8-4218-8f18-0129c0c7310d 	 2022:12:07 	09:43:58 	 info 	 GET 	 /books/ 
+4e8f8475-7cce-43e3-8288-f4724b8f04c5 	 2022:12:07 	18:15:05 	 info 	 GET 	 / 
+75b59043-185f-4ccb-b6db-1c385f2f53b3 	 2022:12:07 	18:17:04 	 info 	 POST 	 /books 
+dea2fc7d-a75a-40ae-a06c-810270ce3a53 	 2022:12:07 	18:17:12 	 info 	 GET 	 /books 
+13675d8e-d3c6-47dc-9242-e26061279b61 	 2022:12:07 	18:19:28 	 info 	 POST 	 /books/639087c40b87a0efcf8701bd/reviews 
+3143c329-bc4a-449a-a1bc-4f187af134a3 	 2022:12:07 	18:24:06 	 info 	 POST 	 /books/639087c40b87a0efcf8701bd/reviews 
+a837b2a8-9422-4c86-8507-cbf0f2b0db5d 	 2022:12:07 	18:27:14 	 info 	 GET 	 /books/639087c40b87a0efcf8701bd/ 
+904171aa-74d8-4bb8-8055-da9c68255c80 	 2022:12:07 	18:30:48 	 info 	 GET 	 /books/639087c40b87a0efcf8701bd/reviews/ 
+90b5f7a2-49e8-4c4d-8953-da7125ea3f74 	 2022:12:07 	18:32:34 	 info 	 POST 	 /books/639087c40b87a0efcf8701bd/reviews/ 
+18810824-c0c5-4878-890b-73b518cc2076 	 2022:12:07 	18:36:53 	 info 	 POST 	 /books/639087c40b87a0efcf8701bd/reviews/ 
+73bf8139-d56e-4620-a59a-032340e0c85b 	 2022:12:07 	18:38:01 	 info 	 POST 	 /books/639087c40b87a0efcf8701bd/reviews/ 

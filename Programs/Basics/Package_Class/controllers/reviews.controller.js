@@ -9,6 +9,7 @@ const getAllReviews = (res, req, next) => {
 }
 
 const createReview = (res, req, next) => {
+    console.log(req.params)
     Books.findById(req.params.id)
         .then((book) => {
             book.reviews.push(req.body)
