@@ -1,17 +1,31 @@
 const express = require('express')
-const { addBook, getAllBooks, updateBook, deleteBook, getBookById } = require('../controllers/books.controller')
+const { addBook, getAllBooks, updateBookbyId, deleteAllBooks, getBookById, deleteBook } = require('../controllers/books.controller')
 const router = express.Router()
+const { getAllReviews, createReview } = require('../controllers/reviews.controller')
 
 router.route('/')
     .get(getAllBooks)
     .post(addBook)
+    .delete(deleteAllBooks)
 
 router.route('/:id')
     .get(getBookById)
     .post((req, res) => {
-        res.status(501).send({"Reply": "Not implemented"})
+        res.status(501).send({ "Reply": "Not implemented" })
     })
-    .put(updateBook)
+    .put(updateBookbyId)
     .delete(deleteBook)
+
+router.route('/:id/reviews')
+    .get(getAllReviews)
+    .post(createReview)
+    .put((req, res) => res.status(405).json({ message: "Method not implemented" }))
+    .delete()
+
+router.route('/:id/reviews/:review_id')
+    .get()
+    .post((req, res) => res.status(405).json({ message: "Method not implemented" }))
+    .put()
+    .delete()
 
 module.exports = router

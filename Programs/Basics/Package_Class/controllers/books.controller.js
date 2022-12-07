@@ -1,48 +1,65 @@
-const books = require("../data/books");
+// const books = require("../data/books")
+const Book = require('../models/Books')
 
-const getAllBooks = (req, res) => {
-    res.status(200).json(books)
-}
-const addBook = (req, res) => {
-    let new_book = {
-        "id": books[books.length - 1].id + 1,
-        "title": req.body.title,
-        "author": req.body.author,
-        "category": req.body.category
-    }
-    books.push(new_book)
-    res.json(books)
-}
-const updateBook = (req, res) => {
-    let updatedBooks = books.map((item) => {
-        if(item.id == req.params.id) {
-            item.title = req.body.title
-            item.author = req.body.author
-        }
-        return item
-    })
-    res.json(updatedBooks)
-}
-const deleteBook = (req, res) => {
-    let newList = books.filter((item) => {
-        return item.id != req.params.id
-    })
-    res.json(newList)
-}
-
-const getBookById = (req, res) => {
-    let book = books.find(item => item.id == req.params.id)
-    if(book === undefined) {
-        res.status(404).json({
-            message: "Requested book not found"
+const getAllBooks = async (req, res, next) => {
+    // try {
+    //     let books = await Book.find()
+    // }
+    // catch (error) {
+    //     console.log(error)
+    // }
+    Book.find()
+        .then((books) => {
+            res.json(books)
         })
+        .catch(next)
+}
+const addBook = (req, res, next) => {
+    let book = {
+        'title': req.body.title,
+        'author': req.body.author,
     }
-    else {
-        res.status(200).json(book)
-    }
+    Book.create(req.body)
+        .then((book) => {
+            res.status(201).json(book)
+        })
+        .catch(next)
+}
+const updateBookbyId = (req, res, next) => {
+    Book.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true })
+        .then((book) => {
+            res.json(book)
+        })
+        .catch(next)
+}
+
+const deleteBook = (req, res, next) => {
+    Book.findByIdAndDelete(req.params.id)
+        .then((reply) => {
+            res.json(reply)
+        })
+        .catch(next)
+}
+
+const deleteAllBooks = (req, res) => {
+    Book.deleteMany()
+        .then((reply) => {
+            res.json(reply)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+}
+
+const getBookById = (req, res, next) => {
+    Book.findById(req.params.id)
+        .then((book) => {
+            res.json(book)
+        })
+        .catch(next)
 }
 
 module.exports = {
-    getAllBooks, addBook, updateBook, deleteBook,
-    getBookById, updateBook, deleteBook
+    getAllBooks, addBook, updateBookbyId, deleteAllBooks,
+    getBookById, deleteBook
 }
