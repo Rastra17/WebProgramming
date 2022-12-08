@@ -8,13 +8,14 @@ const getAllReviews = (res, req, next) => {
         .catch(next)
 }
 
-const createReview = (res, req, next) => {
-    console.log(req.params)
+const createReview = (req, res, next) => {
     Books.findById(req.params.id)
-        .then((book) => {
+        .then(book => {
+            if (!book) {
+                return res.status(404).json({ message: 'Book not found' })
+            }
             book.reviews.push(req.body)
-            book.save()
-                .then((book) => res.status(201).json(book.reviews))
+            book.save().then(book => res.status(201).json(book.reviews))
         })
         .catch(next)
 }
