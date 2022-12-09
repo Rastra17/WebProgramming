@@ -21,6 +21,7 @@ const booksSchema = mongoose.Schema({
         required: true,
     },
     reviews: [reviewSchema]
-})
+}, { timestamps: true }
+)
 
 module.exports = mongoose.model('Books', booksSchema)
