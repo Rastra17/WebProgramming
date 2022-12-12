@@ -3,7 +3,8 @@ const logger = require('./logger')
 const path = require('path')
 const mongoose = require('mongoose')
 
-const book_route = require('./routes/books.route')
+const book_route = require('./routes/books.routes')
+const category_route = require('./routes/category.routes')
 
 const app = express()
 
@@ -34,8 +35,11 @@ app.get('^/$|/index(.html)?', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'))
 })
 
-// Router level middleware
+// Books Router level middleware
 app.use('/books', book_route)
+
+// Categories Router level middleware
+app.use('/categories', category_route)
 
 // Error handling middleware
 app.use((err, req, res, next) => {
