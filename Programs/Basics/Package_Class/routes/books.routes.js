@@ -2,13 +2,15 @@ const express = require('express')
 const { addBook, getAllBooks, updateBookbyId, deleteAllBooks, getBookById, deleteBook } = require('../controllers/books.controller')
 const router = express.Router()
 const { getAllReviews, createReview, deleteAllReviews, getReviewbyId, deleteReviewbyId, updateReviewbyId } = require('../controllers/reviews.controller')
+const { verifyUser, verifyAdmin } = require('../middleware/auth')
+const auth = require('../middleware/auth')
 
 router.route('/')
     .get(getAllBooks)
-    .post(addBook)
-    .delete(deleteAllBooks)
+    .post(verifyUser, addBook)
+    .delete(verifyUser, verifyAdmin, deleteAllBooks)
 
-router.route('/:id')
+router.use(verifyUser).route('/:id')
     .get(getBookById)
     .post((req, res) => {
         res.status(501).send({ "Reply": "Not implemented" })
