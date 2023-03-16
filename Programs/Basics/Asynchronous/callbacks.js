@@ -1,9 +1,9 @@
 //A Callback is a way of calling a function in another function.
 
-function primary(callback) {
+function primary(functionForCallback) {
     console.log("Primary function is running.");
     console.log("Moving to auxiliary function...");
-    callback();
+    functionForCallback();
 }
 
 function auxiliary() {
